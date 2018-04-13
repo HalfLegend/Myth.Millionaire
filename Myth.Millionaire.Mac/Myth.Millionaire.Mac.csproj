@@ -72,6 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -85,9 +86,15 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Setup.cs" />
+    <Compile Include="Views\TestView.cs" />
+    <Compile Include="Views\TestView.designer.cs">
+      <DependentUpon>TestView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="Views\TestView.xib" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Myth.Millionaire.Core\Myth.Millionaire.Core.csproj">
