@@ -1,10 +1,11 @@
 ﻿using AppKit;
 using Foundation;
+using MvvmCross.Platforms.Mac.Core;
 
 namespace Myth.Millionaire.Mac
 {
     [Register("AppDelegate")]
-	public class AppDelegate : MvxAppDelegate
+	public class AppDelegate : MvxApplicationDelegate
     {
         public AppDelegate()
         {
