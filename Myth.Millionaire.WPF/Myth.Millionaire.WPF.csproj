@@ -116,9 +116,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Myth.Millionaire.Core\Myth.Millionaire.Core.csproj">
-      <Project>{d37925b2-dde9-470a-a81f-3b535ae3332a}</Project>
-      <Name>Myth.Millionaire.Core</Name>
+    <ProjectReference Include="..\Myth.Millionaire\Myth.Millionaire.csproj">
+      <Project>{f291b97d-cc65-4fe9-8357-1e2c8a96fbac}</Project>
+      <Name>Myth.Millionaire</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

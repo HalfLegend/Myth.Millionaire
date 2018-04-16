@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using MvvmCross.Commands;
 
-namespace Myth.Millionaire.Core.ViewModels {
+namespace Myth.Millionaire.ViewModels {
     public class MainViewModel : MvxViewModel {
         public MainViewModel() {
         }

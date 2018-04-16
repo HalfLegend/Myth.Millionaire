@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 using System.Windows;
 using MvvmCross.Platforms.Wpf.Views;
 
-namespace Myth.Millionaire.WPF {
+namespace Myth.Millionaire.WPF.Startup {
     /// <summary>
     /// App.xaml 的交互逻辑
     /// </summary>
-    public partial class App : MvxApplication {
+    public partial class WpfApp {
     }
 }

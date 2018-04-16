@@ -1,13 +1,11 @@
 ﻿using MvvmCross.Platforms.Wpf.Core;
-using MvvmCross.Platforms.Wpf.Views;
 using MvvmCross.ViewModels;
-using System.Windows.Controls;
-using System.Windows.Threading;
+using Myth.Millionaire.Framework;
 
-namespace Myth.Millionaire.WPF {
+namespace Myth.Millionaire.WPF.Startup {
     public class Setup : MvxWpfSetup {
         protected override IMvxApplication CreateApp() {
-            return new Core.App();
+            return new App();
         }
     }
 }

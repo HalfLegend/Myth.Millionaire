@@ -2,6 +2,7 @@
 using AppKit;
 using MvvmCross.Platforms.Mac.Core;
 using MvvmCross.ViewModels;
+using Myth.Millionaire.Core.Startup;
 
 namespace Myth.Millionaire.Mac
 {
@@ -9,7 +10,7 @@ namespace Myth.Millionaire.Mac
     {
         protected override IMvxApplication CreateApp()
         {
-            return new Core.App();
+            return new App();
         }
     }
 }
