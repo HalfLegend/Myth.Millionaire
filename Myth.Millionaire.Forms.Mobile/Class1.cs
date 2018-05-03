@@ -1,9 +1,8 @@
 ﻿using System;
 
-namespace Myth.CreditGuard.Library
+namespace Myth.Millionaire.Forms.Mobile
 {
     public class Class1
-  
     {
     }
 }
