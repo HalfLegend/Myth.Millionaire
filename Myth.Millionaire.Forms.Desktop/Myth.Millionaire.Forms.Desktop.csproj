@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ApplicationDefinition Include="Startup\App.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MvvmCross.Forms" Version="6.0.1" />
     <PackageReference Include="Xamarin.Forms" Version="3.0.0.427558-pre4" />
   </ItemGroup>
@@ -12,9 +16,22 @@
   <ItemGroup>
     <ProjectReference Include="..\Myth.Millionaire.Core\Myth.Millionaire.Core.csproj" />
   </ItemGroup>
-
+  
   <ItemGroup>
-    <Folder Include="Views\" />
+    <EmbeddedResource Update="Startup\App.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
-
+  
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Startup\App.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Views\MainPage.xaml.cs">
+      <DependentUpon>*.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>
