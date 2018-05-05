@@ -1,6 +1,6 @@
 ﻿
 using MvvmCross.Platforms.Wpf.Views;
-using Myth.Millionaire.ViewModels;
+using Myth.Millionaire.Core.ViewModels;
 
 namespace Myth.Millionaire.WPF.Views {
 

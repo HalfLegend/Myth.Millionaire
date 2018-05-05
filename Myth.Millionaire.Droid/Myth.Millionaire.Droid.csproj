@@ -83,9 +83,9 @@
     <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Myth.Millionaire\Myth.Millionaire.csproj">
-      <Project>{f291b97d-cc65-4fe9-8357-1e2c8a96fbac}</Project>
-      <Name>Myth.Millionaire</Name>
+    <ProjectReference Include="..\Myth.Millionaire.Core\Myth.Millionaire.Core.csproj">
+      <Project>{09c45b5f-2626-4279-a3ec-58b3693b0eda}</Project>
+      <Name>Myth.Millionaire.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

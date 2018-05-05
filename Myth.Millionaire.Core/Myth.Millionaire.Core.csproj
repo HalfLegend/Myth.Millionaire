@@ -8,4 +8,8 @@
     <PackageReference Include="MvvmCross" Version="6.0.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Myth.CreditGuard.Library\Myth.CreditGuard.Library.csproj" />
+  </ItemGroup>
+
 </Project>

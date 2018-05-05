@@ -4,7 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:views="clr-namespace:MvvmCross.Platforms.Wpf.Views;assembly=MvvmCross.Platforms.Wpf"
-      xmlns:viewModels="clr-namespace:Myth.Millionaire.ViewModels;assembly=Myth.Millionaire"
+      xmlns:viewModels="clr-namespace:Myth.Millionaire.Core.ViewModels;assembly=Myth.Millionaire.Core"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800">
 

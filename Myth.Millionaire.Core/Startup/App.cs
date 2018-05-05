@@ -1,7 +1,7 @@
 ﻿using MvvmCross.IoC;
-using Myth.Millionaire.ViewModels;
+using Myth.Millionaire.Core.ViewModels;
 
-namespace Myth.Millionaire.Framework {
+namespace Myth.Millionaire.Core.Startup {
     public class App : MvvmCross.ViewModels.MvxApplication {
         public override void Initialize() {
             CreatableTypes()

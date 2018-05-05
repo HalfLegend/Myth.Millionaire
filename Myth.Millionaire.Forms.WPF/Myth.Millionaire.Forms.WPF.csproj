@@ -93,5 +93,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Myth.Millionaire.Forms.Desktop\Myth.Millionaire.Forms.Desktop.csproj">
+      <Project>{61d07d8e-992d-44fc-a64d-1d8d85d6514c}</Project>
+      <Name>Myth.Millionaire.Forms.Desktop</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Startup\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

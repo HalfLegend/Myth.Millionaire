@@ -1,8 +1,8 @@
-﻿using MvvmCross.ViewModels;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using MvvmCross.Commands;
+using MvvmCross.ViewModels;
 
-namespace Myth.Millionaire.ViewModels {
+namespace Myth.Millionaire.Core.ViewModels {
     public class MainViewModel : MvxViewModel {
         public MainViewModel() {
         }

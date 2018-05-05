@@ -9,4 +9,12 @@
     <PackageReference Include="Xamarin.Forms" Version="3.0.0.427558-pre4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Myth.Millionaire.Core\Myth.Millionaire.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\" />
+  </ItemGroup>
+
 </Project>
