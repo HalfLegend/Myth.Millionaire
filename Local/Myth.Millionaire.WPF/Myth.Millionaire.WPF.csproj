@@ -35,14 +35,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MvvmCross, Version=6.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.6.0.1\lib\net461\MvvmCross.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.6.0.1\lib\net461\MvvmCross.dll</HintPath>
     </Reference>
     <Reference Include="MvvmCross.Platforms.Wpf, Version=6.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MvvmCross.Platforms.Wpf.6.0.1\lib\net461\MvvmCross.Platforms.Wpf.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.Platforms.Wpf.6.0.1\lib\net461\MvvmCross.Platforms.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Console">
-      <HintPath>..\packages\System.Console.4.3.1\lib\net46\System.Console.dll</HintPath>
+      <HintPath>..\..\packages\System.Console.4.3.1\lib\net46\System.Console.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Data" />
@@ -112,7 +112,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Myth.Millionaire.Core\Myth.Millionaire.Core.csproj">
+    <ProjectReference Include="..\..\Core\Myth.Millionaire.Core\Myth.Millionaire.Core.csproj">
       <Project>{09c45b5f-2626-4279-a3ec-58b3693b0eda}</Project>
       <Name>Myth.Millionaire.Core</Name>
     </ProjectReference>
