@@ -1,12 +1,13 @@
-﻿<startup:MvxFormsWindow x:Class="Myth.Millionaire.Forms.WPF.Startup.MainWindow"
+﻿<views:MvxFormsWindow x:Class="Myth.Millionaire.Forms.WPF.Startup.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:startup="clr-namespace:Myth.Millionaire.Forms.WPF.Startup"
+        xmlns:views="clr-namespace:Myth.Library.MvvmCross.Forms.Platforms.WPF.Views;assembly=Myth.Library.MvvmCross.Forms.Platforms.WPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         
     </Grid>
-</startup:MvxFormsWindow>
+</views:MvxFormsWindow>
+

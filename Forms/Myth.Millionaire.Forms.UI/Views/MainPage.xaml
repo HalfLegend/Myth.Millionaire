@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <d:MvxContentPage x:TypeArguments="viewModels:MainViewModel" xmlns="http://xamarin.com/schemas/2014/forms"
                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                  x:Class="Myth.Millionaire.Forms.Desktop.Views.MainPage"
+                  x:Class="Myth.Millionaire.Forms.UI.Views.MainPage"
                   xmlns:viewModels="clr-namespace:Myth.Millionaire.Core.ViewModels;assembly=Myth.Millionaire.Core"
                   xmlns:d="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms">
     <ContentPage.Content>

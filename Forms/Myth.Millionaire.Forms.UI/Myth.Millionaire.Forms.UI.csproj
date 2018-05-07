@@ -9,4 +9,9 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Core\Myth.Millionaire.Core\Myth.Millionaire.Core.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Startup\FormsApp.xaml.cs">
+      <DependentUpon>FormsApp.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>

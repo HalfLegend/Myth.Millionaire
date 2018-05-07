@@ -7,42 +7,41 @@ using MvvmCross.Forms.Core;
 using MvvmCross.Forms.Presenters;
 using MvvmCross.Platforms.Wpf.Core;
 using MvvmCross.Platforms.Wpf.Presenters;
+using MvvmCross.Platforms.Wpf.Views;
 using MvvmCross.Plugin;
 using MvvmCross.ViewModels;
 using Myth.Library.MvvmCross.Forms.Platforms.WPF.Presenters;
+using Myth.Library.MvvmCross.Forms.Platforms.WPF.Views;
 using Xamarin.Forms;
 
 namespace Myth.Library.MvvmCross.Forms.Platforms.WPF.Core {
     public abstract class MvxFormsWpfSetup : MvxWpfSetup, IMvxFormsSetup {
         private List<Assembly> _viewAssemblies;
         private Application _formsApplication;
-        public override IEnumerable<Assembly> GetViewAssemblies() {
-            if (_viewAssemblies == null) {
-                _viewAssemblies = new List<Assembly>(base.GetViewAssemblies());
-            }
-
-            return _viewAssemblies;
+        
+        public override IEnumerable<Assembly> GetViewAssemblies()
+        {
+            return _viewAssemblies ?? (_viewAssemblies = new List<Assembly>(base.GetViewAssemblies()));
         }
 
         protected override void InitializeIoC() {
             base.InitializeIoC();
+            Xamarin.Forms.Forms.Init();
             Mvx.RegisterSingleton<IMvxFormsSetup>(this);
         }
 
         protected override void InitializeApp(IMvxPluginManager pluginManager, IMvxApplication app) {
             base.InitializeApp(pluginManager, app);
             _viewAssemblies.AddRange(GetViewModelAssemblies());
+
+            MvxFormsWindow formsWindow = (MvxFormsWindow)System.Windows.Application.Current.MainWindow;
+            formsWindow.LoadApplication(FormsApplication);
         }
 
         public virtual Application FormsApplication {
             get {
-                if (!Xamarin.Forms.Forms.IsInitialized) {
-                    Xamarin.Forms.Forms.Init();
-                }
                 if (_formsApplication == null) {
                     _formsApplication = CreateFormsApplication();
-                }
-                if (Application.Current != _formsApplication) {
                     Application.Current = _formsApplication;
                 }
                 return _formsApplication;

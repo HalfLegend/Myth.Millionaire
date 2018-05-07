@@ -10,8 +10,6 @@ namespace Myth.Millionaire.Forms.WPF.Startup {
     // ReSharper disable once InheritdocConsiderUsage
     public partial class MainWindow {
         public MainWindow() {
-            Xamarin.Forms.Forms.Init();
-            LoadApplication(new Desktop.Startup.App());
             InitializeComponent();
         }
     }
