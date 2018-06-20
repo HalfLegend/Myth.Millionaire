@@ -1,7 +1,7 @@
 ﻿using MvvmCross.Core;
-using MvvmCross.Forms.Platforms.Wpf.Core;
+using Myth.Library.MvvmCross.Forms.Platforms.WPF.Core;
 
-namespace Myth.Millionaire.Forms.WPF.Startup {
+namespace Myth.Millionaire.Forms.WPFv0.Startup {
     /// <summary>
     /// FormsApp.xaml 的交互逻辑
     /// </summary>

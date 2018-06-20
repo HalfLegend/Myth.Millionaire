@@ -1,4 +1,5 @@
-﻿using MvvmCross.IoC;
+﻿using System;
+using MvvmCross.IoC;
 using Myth.Millionaire.Core.ViewModels;
 
 namespace Myth.Millionaire.Core.Startup {

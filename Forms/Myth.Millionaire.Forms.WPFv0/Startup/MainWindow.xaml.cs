@@ -4,7 +4,7 @@ using System.Windows;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.WPF;
 
-namespace Myth.Millionaire.Forms.WPF.Startup {
+namespace Myth.Millionaire.Forms.WPFv0.Startup {
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
     /// </summary>

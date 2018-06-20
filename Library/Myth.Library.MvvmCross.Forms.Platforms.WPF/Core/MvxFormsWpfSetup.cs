@@ -23,10 +23,25 @@ namespace Myth.Library.MvvmCross.Forms.Platforms.WPF.Core {
         {
             return _viewAssemblies ?? (_viewAssemblies = new List<Assembly>(base.GetViewAssemblies()));
         }
+        protected override void InitializePlatformServices() {
+            InitializeXamarinForms();
+            base.InitializePlatformServices();
+        }
+
+        protected void InitializeXamarinForms() {
+            Xamarin.Forms.Forms.Init();
+            MvxFormsWindow formsWindow = (MvxFormsWindow)System.Windows.Application.Current.MainWindow;
+            formsWindow.LoadApplication(FormsApplication);
+
+            FormsApplication.PropertyChanged += (sender, args) => {
+                if (args.PropertyName != "MainPage")
+                    return;
+                formsWindow.Content = FormsApplication.MainPage;
+            };
+        }
 
         protected override void InitializeIoC() {
             base.InitializeIoC();
-            Xamarin.Forms.Forms.Init();
             Mvx.RegisterSingleton<IMvxFormsSetup>(this);
         }
 
@@ -34,14 +49,13 @@ namespace Myth.Library.MvvmCross.Forms.Platforms.WPF.Core {
             base.InitializeApp(pluginManager, app);
             _viewAssemblies.AddRange(GetViewModelAssemblies());
 
-            MvxFormsWindow formsWindow = (MvxFormsWindow)System.Windows.Application.Current.MainWindow;
-            formsWindow.LoadApplication(FormsApplication);
         }
 
         public virtual Application FormsApplication {
             get {
                 if (_formsApplication == null) {
                     _formsApplication = CreateFormsApplication();
+                    _formsApplication.MainPage = new NavigationPage();
                     Application.Current = _formsApplication;
                 }
                 return _formsApplication;
@@ -51,7 +65,7 @@ namespace Myth.Library.MvvmCross.Forms.Platforms.WPF.Core {
         protected abstract Application CreateFormsApplication();
 
         protected virtual IMvxFormsPagePresenter CreateFormsPagePresenter(IMvxFormsViewPresenter viewPresenter) {
-            var formsPagePresenter = new MvxFormsPagePresenter(viewPresenter);
+            var formsPagePresenter = new MvxFormsWpfViePresenter(viewPresenter);
             Mvx.RegisterSingleton(formsPagePresenter);
             return formsPagePresenter;
         }
@@ -90,7 +104,7 @@ namespace Myth.Library.MvvmCross.Forms.Platforms.WPF.Core {
 
 
     public class MvxFormsWpfSetup<TApplication, TFormsApplication> : MvxFormsWpfSetup
-        where TApplication : IMvxApplication, new()
+        where TApplication : class ,IMvxApplication, new()
         where TFormsApplication : Application, new() {
         public override IEnumerable<Assembly> GetViewAssemblies() {
             return new List<Assembly>(base.GetViewAssemblies().Union(new[] { typeof(TFormsApplication).GetTypeInfo().Assembly }));
@@ -102,6 +116,6 @@ namespace Myth.Library.MvvmCross.Forms.Platforms.WPF.Core {
 
         protected override Application CreateFormsApplication() => new TFormsApplication();
 
-        protected override IMvxApplication CreateApp() => Mvx.IocConstruct<TApplication>();
+        protected override IMvxApplication CreateApp() => Mvx.IoCConstruct<TApplication>();
     }
 }

@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using MvvmCross.Forms.Presenters;
 using MvvmCross.Platforms.Wpf.Presenters;
+using MvvmCross.Platforms.Wpf.Presenters.Attributes;
+using MvvmCross.Presenters.Attributes;
 using MvvmCross.ViewModels;
-using Xamarin.Forms;
+using Application = Xamarin.Forms.Application;
 
 namespace Myth.Library.MvvmCross.Forms.Platforms.WPF.Presenters {
     class MvxFormsWpfViewPresenter : MvxWpfViewPresenter, IMvxFormsViewPresenter {
@@ -25,6 +28,15 @@ namespace Myth.Library.MvvmCross.Forms.Platforms.WPF.Presenters {
                 return _formsPagePresenter;
             }
             set { _formsPagePresenter = value; }
+        }
+
+        public override MvxBasePresentationAttribute CreatePresentationAttribute(Type viewModelType, Type viewType) {
+            if (viewType.IsSubclassOf(typeof(Window))) {
+
+                return new MvxWindowPresentationAttribute();
+            }
+
+            return new MvxContentPresentationAttribute();
         }
 
         public override void Show(MvxViewModelRequest request) {
@@ -53,6 +65,10 @@ namespace Myth.Library.MvvmCross.Forms.Platforms.WPF.Presenters {
         public virtual bool ClosePlatformViews() {
             // MvxFormsLog.Instance.Trace($"Showing of native host View in Forms is not supported.");
             return false;
+        }
+
+        class InnerFormsPresenter {
+            
         }
     }
 }
