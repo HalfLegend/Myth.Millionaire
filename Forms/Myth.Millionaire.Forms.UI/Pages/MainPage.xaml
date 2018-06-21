@@ -1,8 +1,13 @@
-﻿<d:MvxContentPage x:TypeArguments="viewModels:MainViewModel" xmlns="http://xamarin.com/schemas/2014/forms"
-xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
-                  xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
-                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Myth.Millionaire.Forms.UI.Pages.MainPage"
-                  xmlns:d="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
-                  xmlns:viewModels="clr-namespace:Myth.Millionaire.Core.ViewModels;assembly=Myth.Millionaire.Core">
-    <Label>abc</Label>
-</d:MvxContentPage>
+﻿<forms:MvxTabbedPage x:TypeArguments="viewModels:MainViewModel"  x:Class="Myth.Millionaire.Forms.UI.Pages.MainPage"
+                 xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:forms="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+                 xmlns:viewModels="clr-namespace:Myth.Millionaire.Core.ViewModels;assembly=Myth.Millionaire.Core"
+                 xmlns:masterDetail="clr-namespace:Myth.Millionaire.Forms.UI.Pages.CreditMasterDetail"
+                 xmlns:calendar="clr-namespace:Myth.Millionaire.Forms.UI.Pages.CreditCalendar"
+                 xmlns:gauge="clr-namespace:Myth.Millionaire.Forms.UI.Pages.CreditGauge"
+                     Title="ABC">
+    <masterDetail:CreditMasterDetailPage/>
+    <calendar:CreditCalendarPage/>
+    <gauge:CreditGaugePage/>
+</forms:MvxTabbedPage>

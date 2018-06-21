@@ -11,40 +11,67 @@
     <ProjectReference Include="..\..\Core\Myth.Millionaire.Core\Myth.Millionaire.Core.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Telerik.Documents.SpreadsheetStreaming">
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2018\Binaries\Portable\Telerik.Documents.SpreadsheetStreaming.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.Barcode">
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2018\Binaries\Portable\Telerik.XamarinForms.Barcode.dll</HintPath>
+    </Reference>
     <Reference Include="Telerik.XamarinForms.Chart">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\Portable\Telerik.XamarinForms.Chart.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2018\Binaries\Portable\Telerik.XamarinForms.Chart.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.Common">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\Portable\Telerik.XamarinForms.Common.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2018\Binaries\Portable\Telerik.XamarinForms.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.ConversationalUI">
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2018\Binaries\Portable\Telerik.XamarinForms.ConversationalUI.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.DataControls">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\Portable\Telerik.XamarinForms.DataControls.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2018\Binaries\Portable\Telerik.XamarinForms.DataControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.XamarinForms.DataGrid">
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2018\Binaries\Portable\Telerik.XamarinForms.DataGrid.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.DataVisualization">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\Portable\Telerik.XamarinForms.DataVisualization.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2018\Binaries\Portable\Telerik.XamarinForms.DataVisualization.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.Input">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\Portable\Telerik.XamarinForms.Input.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2018\Binaries\Portable\Telerik.XamarinForms.Input.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.Primitives">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\Portable\Telerik.XamarinForms.Primitives.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2018\Binaries\Portable\Telerik.XamarinForms.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.SkiaSharp">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\Portable\Telerik.XamarinForms.SkiaSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.Documents.SpreadsheetStreaming">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\Portable\Telerik.Documents.SpreadsheetStreaming.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2018\Binaries\Portable\Telerik.XamarinForms.SkiaSharp.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.Zip">
-      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R1 2018\Binaries\Portable\Telerik.Zip.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Progress\Telerik UI for Xamarin R2 2018\Binaries\Portable\Telerik.Zip.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Pages\CreditMasterDetail\CreditMasterDetailPageMenuItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Startup\FormsApp.xaml.cs">
       <DependentUpon>FormsApp.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Update="Pages\CreditCalendar\CreditCalendarPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\CreditGauge\CreditGaugePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\CreditMasterDetail\CreditMasterDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\CreditMasterDetail\CreditMasterDetailPageDetail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Pages\CreditMasterDetail\CreditMasterDetailPageMaster.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Startup\FormsApp.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
