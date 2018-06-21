@@ -1,17 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Myth.Millionaire.Forms.UI.Pages.CreditMasterDetail.CreditMasterDetailPage"
-             xmlns:pages="clr-namespace:Myth.Millionaire.Forms.UI.Pages.CreditMasterDetail"
+﻿<forms:MvxMasterDetailPage x:TypeArguments="viewModels:CreditMasterDetailViewModel"
+                  x:Class="Myth.Millionaire.Forms.UI.Pages.CreditMasterDetail.CreditMasterDetailPage"
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:forms="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+                  xmlns:viewModels="clr-namespace:Myth.Millionaire.Core.ViewModels.CreditMasterDetail;assembly=Myth.Millionaire.Core"
+                  xmlns:pages="clr-namespace:Myth.Millionaire.Forms.UI.Pages.CreditMasterDetail"
                   Title="信用">
-  <MasterDetailPage.Master>
-    <pages:CreditMasterDetailPageMaster x:Name="MasterPage" />
-  </MasterDetailPage.Master>
-  <MasterDetailPage.Detail>
-    <NavigationPage>
-      <x:Arguments>
-        <pages:CreditMasterDetailPageDetail />
-      </x:Arguments>
-    </NavigationPage>
-  </MasterDetailPage.Detail>
-</MasterDetailPage>
+    <MasterDetailPage.Master>
+        <pages:CreditMasterDetailPageMaster x:Name="MasterPage" />
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <pages:CreditMasterDetailPageDetail />
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</forms:MvxMasterDetailPage>

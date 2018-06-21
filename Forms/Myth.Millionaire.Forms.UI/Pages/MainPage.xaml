@@ -6,7 +6,7 @@
                  xmlns:masterDetail="clr-namespace:Myth.Millionaire.Forms.UI.Pages.CreditMasterDetail"
                  xmlns:calendar="clr-namespace:Myth.Millionaire.Forms.UI.Pages.CreditCalendar"
                  xmlns:gauge="clr-namespace:Myth.Millionaire.Forms.UI.Pages.CreditGauge"
-                     Title="ABC">
+                     Title="信用管家">
     <masterDetail:CreditMasterDetailPage/>
     <calendar:CreditCalendarPage/>
     <gauge:CreditGaugePage/>

@@ -4,6 +4,9 @@
              x:Class="Myth.Millionaire.Forms.UI.Pages.CreditMasterDetail.CreditMasterDetailPageMaster"
              Title="Master">
   <StackLayout>
+        <Label>start</Label>
+        <Label Text="{Binding Text2}"/>
+        <Label>End</Label>
     <ListView x:Name="MenuItemsListView"
               SeparatorVisibility="None"
               HasUnevenRows="true"
