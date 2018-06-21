@@ -1,5 +1,6 @@
 ﻿<forms:MvxTabbedPage x:TypeArguments="viewModels:MainViewModel"  x:Class="Myth.Millionaire.Forms.UI.Pages.MainPage"
                  xmlns="http://xamarin.com/schemas/2014/forms"
+xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                  xmlns:forms="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
                  xmlns:viewModels="clr-namespace:Myth.Millionaire.Core.ViewModels;assembly=Myth.Millionaire.Core"
@@ -8,6 +9,4 @@
                  xmlns:gauge="clr-namespace:Myth.Millionaire.Forms.UI.Pages.CreditGauge"
                      Title="信用管家">
     <masterDetail:CreditMasterDetailPage/>
-    <calendar:CreditCalendarPage/>
-    <gauge:CreditGaugePage/>
 </forms:MvxTabbedPage>
